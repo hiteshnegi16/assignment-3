@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 0; 
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        main {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+            grid-gap: 15px;
+        }
+
+        .service {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service img {
+            max-width: 100%; 
+            max-height: 200px; 
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .service h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            color: #fff;
+        }
+
+        .collapsible {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .collapsible-content {
+            display: none;
+            padding: 10px;
+        }
+
+        .collapsible-button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .collapsible-button:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Pet Services</h1>
+</header>
+<nav>
+    <a href="Index.html">Home</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="petservices.html">Pet Services</a>
+</nav>
+
+<main>
+    <div class="service">
+        <img src="https://images.pexels.com/photos/8343328/pexels-photo-8343328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Bathing Service">
+        <h2>Bath Service</h2>
+        <p>Bathing services are the most common one you’ll see on any groomer's list since dog owners frequently call for them to remove the dirt and stank that has accumulated on the pup. Since dogs require a healthy amount of time to run around outside to release energy and exercise, it’s not too surprising that bathing is a typical service found on every list.</p>
+    </div>
+    <div class="service">
+        <img src="https://images.pexels.com/photos/8498861/pexels-photo-8498861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Brushing Service">
+        <h2>Brushing</h2>
+        <p>Brushing is a typical grooming service you'll find on any groomers list since it's one commonly chosen by dog owners. The groomer will use the appropriate brushes for coat types to remove damaged and dead hair, enabling new hair growth for a healthier coat.</p>
+    </div>
+</main>
+
+<div class="collapsible">
+    <button class="collapsible-button" onclick="togglePetsHotel()">Pets Hotel</button>
+    <div class="collapsible-content" id="petsHotelContent">
+        <p>Pet hotels are more like a resort for your pets than traditional boarding kennels such as doggy daycare. They offer a variety of amenities and services to ensure your pet is comfortable and happy while you're away. It's the best option for pet parents who don't want to leave their four-legged friends at home alone.</p>
+    </div>
+</div>
+
+<div class="collapsible">
+    <button class="collapsible-button" onclick="togglePetDayCamp()">Pet Day Camp</button>
+    <div class="collapsible-content" id="petDayCampContent">
+        <p>Pet day camps are a great way for your furry friend to socialize and get exercise while you're at work or busy. They typically offer activities like group play, walks, and sometimes even training sessions. It's an excellent option for pet parents who want their pets to have fun and stay active during the day.</p>
+    </div>
+</div>
+<BR>
+    <BR>
+        <BR>
+            <BR>
+
+
+<footer>
+    <p>&copy; 2024 Made by Hitesh Negi.<br>Content generated by google.com, pexels.com & pawsh.app</p>
+</footer>
+
+<script>
+    function togglePetsHotel() {
+        var content = document.getElementById("petsHotelContent");
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+
+    function togglePetDayCamp() {
+        var content = document.getElementById("petDayCampContent");
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+
+
+</script>
+</body>
+</html>
